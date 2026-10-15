@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#17171b">
+    <meta name="description" content="Flat Piano — a quiet place to play, learn, and make music.">
+    <link rel="icon" href="icon-256.png" sizes="256x256">
+    <link rel="apple-touch-icon" href="icon-256.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <title>Flat Piano — Studio</title>
+</head>
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <a class="brand" href="#piano" aria-label="Jump to the piano">
+                <span class="brand-mark">FP</span>
+                <span class="brand-name">FLAT PIANO<small>STUDIO</small></span>
+            </a>
+            <div class="topbar-actions">
+                <span class="session-status"><i></i> SESSION 01</span>
+                <div class="sound-control">
+                    <label for="volume">VOL</label>
+                    <input id="volume" type="range" min="0" max="100" value="75" aria-label="Volume">
+                </div>
+                <button class="icon-button" id="sound-toggle" type="button" aria-label="Mute sound" title="Mute sound">◖</button>
+                <button class="icon-button" id="theme-toggle" type="button" aria-label="Use light theme" title="Use light theme">◐</button>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <section class="welcome-row">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span>01</span> A SMALL MUSIC STUDIO</p>
+                    <h1>Make room<br><em>for music.</em></h1>
+                    <p class="intro">A gentle place to explore sound, one note at a time.</p>
+                </div>
+                <div class="hero-note" aria-hidden="true">
+                    <span class="note-ring ring-one"></span>
+                    <span class="note-ring ring-two"></span>
+                    <span class="hero-note-symbol">♪</span>
+                    <small>START HERE</small>
+                    <strong>Begin with<br>one note.</strong>
+                </div>
+            </section>
+
+            <section class="stats-row" aria-label="Session stats">
+                <article class="stat-card score-card">
+                    <span class="stat-caption">SCORE</span>
+                    <strong id="score">0000</strong>
+                </article>
+                <article class="stat-card streak-card">
+                    <span class="stat-caption">STREAK</span>
+                    <strong id="streak">0 <i>notes</i></strong>
+                </article>
+                <article class="stat-card level-card">
+                    <span class="stat-caption">LEVEL</span>
+                    <strong id="level">1 <i>starter</i></strong>
+                </article>
+                <div class="xp-card">
+                    <div><span><small>SESSION PROGRESS</small><strong id="xp-label">Ready to play</strong></span><span id="xp-percent">0%</span></div>
+                    <div class="progress-track"><span id="xp-bar"></span></div>
+                </div>
+            </section>
+
+            <section class="game-layout">
+                <div class="play-column">
+                    <div class="mode-tabs" role="tablist" aria-label="Game modes">
+                        <button class="mode-tab active" data-mode="free" role="tab" aria-selected="true" type="button"><span>PLAY</span> Free play</button>
+                        <button class="mode-tab" data-mode="learn" role="tab" aria-selected="false" tabindex="-1" type="button"><span>LEARN</span> Learn notes</button>
+                        <button class="mode-tab" data-mode="challenge" role="tab" aria-selected="false" tabindex="-1" type="button"><span>RACE</span> Challenge</button>
+                    </div>
+
+                    <div class="lesson-panel" id="lesson-panel">
+                        <div class="lesson-copy">
+                            <span class="level-badge" id="mode-badge">FREE PLAY</span>
+                            <h2 id="mode-title">Explore the keys</h2>
+                            <p id="mode-description">There are no wrong notes here. Make a melody and have fun.</p>
+                        </div>
+                        <div class="target-area">
+                            <span class="target-caption" id="target-caption">YOUR TURN</span>
+                            <div class="target-note" id="target-note"><strong>♪</strong><small>Choose a note</small></div>
+                            <div class="note-dots" id="note-dots" aria-label="Melody progress"></div>
+                        </div>
+                        <button class="primary-button" id="round-button" type="button">Try Learn Notes <span>→</span></button>
+                    </div>
+
+                    <div class="piano-card">
+                        <div class="piano-heading">
+                            <span><strong>THE PIANO</strong><small>Two octaves · tap a key or use the letters shown</small></span>
+                            <div class="piano-tools">
+                                <div class="voice-switch" role="group" aria-label="Instrument sound">
+                                    <button class="voice-option active" data-voice="piano" type="button">PIANO</button>
+                                    <button class="voice-option" data-voice="felt" type="button">FELT</button>
+                                    <button class="voice-option" data-voice="bell" type="button">BELL</button>
+                                    <button class="voice-option" data-voice="organ" type="button">ORGAN</button>
+                                    <button class="voice-option" data-voice="pad" type="button">PAD</button>
+                                </div>
+                                <span class="key-guide"><span class="range-label">C3 — C5</span></span>
+                            </div>
+                        </div>
+                        <p class="keyboard-help" id="keyboard-help">Play C3 to C5 with the computer keys shown, a pointer, touch, or a connected MIDI keyboard.</p>
+                        <div class="piano" id="piano" role="group" aria-label="Interactive piano keyboard" aria-describedby="keyboard-help">
+                            <div class="white-keys">
+                                <button class="piano-key white-key" data-note="do" data-key="a" aria-label="Do, keyboard A"><span class="key-letter">A</span><strong>DO</strong><small>C4</small></button>
+                                <button class="piano-key white-key" data-note="re" data-key="s" aria-label="Re, keyboard S"><span class="key-letter">S</span><strong>RE</strong><small>D4</small></button>
+                                <button class="piano-key white-key" data-note="mi" data-key="d" aria-label="Mi, keyboard D"><span class="key-letter">D</span><strong>MI</strong><small>E4</small></button>
+                                <button class="piano-key white-key" data-note="fa" data-key="f" aria-label="Fa, keyboard F"><span class="key-letter">F</span><strong>FA</strong><small>F4</small></button>
+                                <button class="piano-key white-key" data-note="sol" data-key="g" aria-label="Sol, keyboard G"><span class="key-letter">G</span><strong>SOL</strong><small>G4</small></button>
+                                <button class="piano-key white-key" data-note="la" data-key="h" aria-label="La, keyboard H"><span class="key-letter">H</span><strong>LA</strong><small>A4</small></button>
+                                <button class="piano-key white-key" data-note="si" data-key="j" aria-label="Si, keyboard J"><span class="key-letter">J</span><strong>SI</strong><small>B4</small></button>
+                                <button class="piano-key white-key" data-note="do_h" data-key="k" aria-label="High Do, keyboard K"><span class="key-letter">K</span><strong>DO</strong><small>C5</small></button>
+                            </div>
+                            <div class="black-keys">
+                                <button class="piano-key black-key black-1" data-note="do_th" data-key="w" aria-label="Sharp Do, keyboard W"><span>W</span></button>
+                                <button class="piano-key black-key black-2" data-note="re_th" data-key="e" aria-label="Sharp Re, keyboard E"><span>E</span></button>
+                                <button class="piano-key black-key black-3" data-note="fa_th" data-key="t" aria-label="Sharp Fa, keyboard T"><span>T</span></button>
+                                <button class="piano-key black-key black-4" data-note="sol_th" data-key="y" aria-label="Sharp Sol, keyboard Y"><span>Y</span></button>
+                                <button class="piano-key black-key black-5" data-note="la_th" data-key="u" aria-label="Sharp La, keyboard U"><span>U</span></button>
+                            </div>
+                        </div>
+                        <div class="piano-footer">
+                            <p class="piano-tip"><span>TIP</span> Notes use both solfège and scientific pitch: DO is C, RE is D.</p>
+                            <div class="practice-tools">
+                                <button class="practice-button" id="record-toggle" type="button" aria-pressed="false">● RECORD</button>
+                                <button class="practice-button" id="replay-button" type="button" disabled>REPLAY</button>
+                                <button class="practice-button" id="loop-toggle" type="button" aria-pressed="false">LOOP <i>OFF</i></button>
+                                <select class="speed-select" id="replay-speed" aria-label="Replay speed">
+                                    <option value="1">1×</option>
+                                    <option value="0.75">0.75×</option>
+                                    <option value="0.5">0.5×</option>
+                                </select>
+                                <button class="sustain-button" id="sustain-toggle" type="button" aria-pressed="false">SUSTAIN <i>OFF</i></button>
+                                <button class="practice-button" id="metronome-toggle" type="button" aria-pressed="false">METRO <i>OFF</i></button>
+                                <label class="tempo-control" for="tempo">BPM <input id="tempo" type="range" min="50" max="160" value="90"><output id="tempo-value">90</output></label>
+                                <button class="practice-button" id="midi-toggle" type="button">MIDI</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="side-column">
+                    <div class="side-card welcome-card">
+                        <div class="card-heading"><span class="card-number">01</span><strong>Today’s mission</strong></div>
+                        <p>Play <strong>10 notes</strong> and earn your first music star.</p>
+                        <div class="mission-progress"><span id="mission-bar"></span></div>
+                        <small id="mission-label">0 / 10 notes played</small>
+                    </div>
+                    <div class="side-card songs-card">
+                        <div class="card-heading"><span class="card-number">02</span><strong>Melody garden</strong><button type="button" id="shuffle-song" aria-label="Shuffle melody">↝</button></div>
+                        <button class="song-option selected" data-song="sunrise" type="button"><span class="song-icon yellow">I</span><span><strong>Sunny steps</strong><small>Beginner · 4 notes</small></span><span class="song-check">●</span></button>
+                        <button class="song-option" data-song="bunny" type="button"><span class="song-icon pink">II</span><span><strong>Bunny hop</strong><small>Beginner · 5 notes</small></span><span class="song-lock">○</span></button>
+                        <button class="song-option" data-song="stars" type="button"><span class="song-icon blue">III</span><span><strong>Star sparkle</strong><small>Growing · 7 notes</small></span><span class="song-lock">○</span></button>
+                    </div>
+                    <div class="side-card encouragement-card">
+                        <span class="quote-mark">“</span>
+                        <p id="encouragement">Every great musician starts with one note.</p>
+                        <span class="quote-author">A note from your music buddy</span>
+                    </div>
+                </aside>
+            </section>
+        </main>
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+        <div class="summary-modal" id="summary-modal" hidden>
+            <div class="summary-card" role="dialog" aria-modal="true" aria-labelledby="summary-title" aria-describedby="summary-copy" tabindex="-1">
+                <button class="summary-close" id="summary-close" type="button" aria-label="Close summary">×</button>
+                <p class="eyebrow"><span>SESSION COMPLETE</span></p>
+                <h2 id="summary-title">A lovely little performance.</h2>
+                <p id="summary-copy">Here is how your practice went.</p>
+                <div class="summary-stats">
+                    <span><small>ACCURACY</small><strong id="summary-accuracy">0%</strong></span>
+                    <span><small>NOTES</small><strong id="summary-notes">0</strong></span>
+                    <span><small>BEST STREAK</small><strong id="summary-streak">0</strong></span>
+                </div>
+                <button class="primary-button" id="summary-replay" type="button">Play it again <span>→</span></button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

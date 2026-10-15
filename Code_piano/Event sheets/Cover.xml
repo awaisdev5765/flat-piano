@@ -1,0 +1,938 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Cover</name>
+    <events>
+        <variable constant="0" name="scaleRatio" sid="2448536923571209" static="0" type="number">0</variable>
+        <event-group collapsed="1" description="" sid="9315378759375137" title="Start">
+            <sub-events>
+                <event-block collapsed="1" sid="5469946848878932">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="3012391782573515" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="8180485222449787" type="System">
+                            <param id="0" name="Variable">scaleRatio</param>
+                            <param id="1" name="Value">min(WindowWidth / LayoutWidth, WindowHeight / LayoutHeight)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="6475742746097752" type="bgcv">
+                            <param id="0" name="X">LayoutWidth/2</param>
+                            <param id="1" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="3673157321356144" type="bgcv">
+                            <param id="0" name="Width">WindowWidth / scaleRatio+5</param>
+                            <param id="1" name="Height">WindowHeight/ scaleRatio</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="1313817043869306" type="phim">
+                            <param id="0" name="Y">403*(windowHeight / scaleRatio / LayoutHeight )+( LayoutHeight - WindowHeight/ScaleRatio ) / 2</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="7531603423013559" type="phimphu">
+                            <param id="0" name="Y">163*(windowHeight / scaleRatio / LayoutHeight )+( LayoutHeight - WindowHeight/ScaleRatio ) / 2</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="2586353165136416" type="do">
+                            <param id="0" name="X">60*(WindowWidth / scaleRatio / LayoutWidth ) + ( LayoutWidth - WindowWidth/scaleRatio  ) / 2</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="2623589976739196" type="re">
+                            <param id="0" name="X">180*(WindowWidth / scaleRatio / LayoutWidth ) + ( LayoutWidth - WindowWidth/scaleRatio  ) / 2</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="1637378102150906" type="mi">
+                            <param id="0" name="X">300*(WindowWidth / scaleRatio / LayoutWidth ) + ( LayoutWidth - WindowWidth/scaleRatio  ) / 2</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="6338198545819225" type="fa">
+                            <param id="0" name="X">420*(WindowWidth / scaleRatio / LayoutWidth ) + ( LayoutWidth - WindowWidth/scaleRatio  ) / 2</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="4508345759376144" type="sol">
+                            <param id="0" name="X">540*(WindowWidth / scaleRatio / LayoutWidth ) + ( LayoutWidth - WindowWidth/scaleRatio  ) / 2</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="3314302399428157" type="la">
+                            <param id="0" name="X">660*(WindowWidth / scaleRatio / LayoutWidth ) + ( LayoutWidth - WindowWidth/scaleRatio  ) / 2</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="9733930233661852" type="Si">
+                            <param id="0" name="X">780*(WindowWidth / scaleRatio / LayoutWidth ) + ( LayoutWidth - WindowWidth/scaleRatio  ) / 2</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="3891500521529234" type="do2">
+                            <param id="0" name="X">900*(WindowWidth / scaleRatio / LayoutWidth ) + ( LayoutWidth - WindowWidth/scaleRatio  ) / 2</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="4120631975631516" type="nutphu">
+                            <param id="0" name="X">120*(WindowWidth / scaleRatio / LayoutWidth ) + ( LayoutWidth - WindowWidth/scaleRatio  ) / 2</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="513361082324998" type="nutphu2">
+                            <param id="0" name="X">240*(WindowWidth / scaleRatio / LayoutWidth ) + ( LayoutWidth - WindowWidth/scaleRatio  ) / 2</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="4742094147192215" type="nutphu3">
+                            <param id="0" name="X">480*(WindowWidth / scaleRatio / LayoutWidth ) + ( LayoutWidth - WindowWidth/scaleRatio  ) / 2</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="5568677227045868" type="nutphu4">
+                            <param id="0" name="X">600*(WindowWidth / scaleRatio / LayoutWidth ) + ( LayoutWidth - WindowWidth/scaleRatio  ) / 2</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="5666469511321009" type="nutphu5">
+                            <param id="0" name="X">720*(WindowWidth / scaleRatio / LayoutWidth ) + ( LayoutWidth - WindowWidth/scaleRatio  ) / 2</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="329038773263572" type="phim">
+                            <param id="0" name="Width">(120/layoutwidth)*WindowWidth / scaleRatio</param>
+                            <param id="1" name="Height">(475/layoutheight)*WindowHeight / scaleRatio</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="2083849756507889" type="phimphu">
+                            <param id="0" name="Width">(82/layoutwidth)*WindowWidth / scaleRatio</param>
+                            <param id="1" name="Height">(255/layoutheight)*WindowHeight / scaleRatio</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="8880678401350378" type="Text">
+                            <param id="0" name="Y">do.Y+50</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5881346123255169" type="Text">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8165200020568751">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="3272817344681215" type="Text">
+                                    <param id="0" name="Unique ID">19</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="5168967868302658" type="Text">
+                                    <param id="0" name="X">do.X</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9524345523276092">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="2222144259468502" type="Text">
+                                    <param id="0" name="Unique ID">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="7807352508559392" type="Text">
+                                    <param id="0" name="X">re.X</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2393906296450329">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="7800689482570534" type="Text">
+                                    <param id="0" name="Unique ID">21</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="9783296287934835" type="Text">
+                                    <param id="0" name="X">mi.X</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6390778081677592">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="4163037950331249" type="Text">
+                                    <param id="0" name="Unique ID">22</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="9103944490233482" type="Text">
+                                    <param id="0" name="X">fa.X</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4582403310982262">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="8727399240360275" type="Text">
+                                    <param id="0" name="Unique ID">23</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="5276797755242502" type="Text">
+                                    <param id="0" name="X">sol.X</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8104522480749622">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="7040193250924091" type="Text">
+                                    <param id="0" name="Unique ID">24</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="8434207565752273" type="Text">
+                                    <param id="0" name="X">la.X</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3778242337916845">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="8626554909285414" type="Text">
+                                    <param id="0" name="Unique ID">25</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="7906716714776037" type="Text">
+                                    <param id="0" name="X">Si.X</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5736569185025526">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="8689287980146143" type="Text">
+                                    <param id="0" name="Unique ID">27</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="6849761522085167" type="Text">
+                                    <param id="0" name="X">do2.X</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="4103052692731063" title="tredle">
+            <sub-events>
+                <event-block sid="8241078789710458">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="126022017665769" type="bgcv">
+                            <param id="0" name="Instance variable">Bass</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block collapsed="1" sid="5128496853606462">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2643007504831848" type="bgcv">
+                                    <param id="0" name="Instance variable">do</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="9039014897078446">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="8885108938270192" type="Touch">
+                                            <param id="0" name="Object">do</param>
+                                        </condition>
+                                        <condition id="0" name="On key pressed" sid="6288377130012457" type="Keyboard">
+                                            <param id="0" name="Key">65 (A)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="6188453443386741" type="Audio">
+                                            <param id="0" name="Audio file">do</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7720983492994871" type="bgcv">
+                                            <param id="0" name="Instance variable">do</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="4033862645627919" type="do">
+                                            <param id="0" name="Object">H_Ung</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="6123340078931188" type="phimphu" />
+                                        <action id="-7" name="Set size" sid="9775469111675904" type="H_Ung">
+                                            <param id="0" name="Width">(120/layoutwidth)*WindowWidth / scaleRatio</param>
+                                            <param id="1" name="Height">(475/layoutheight)*WindowHeight / scaleRatio</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="2334289634803775">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="1868837958538341" type="Text">
+                                                    <param id="0" name="Unique ID">19</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="5410344957779716" type="Text">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block collapsed="1" sid="4315064344664397">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1638890206266815" type="bgcv">
+                                    <param id="0" name="Instance variable">re</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="2221582692018504">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="2442843615149734" type="Touch">
+                                            <param id="0" name="Object">re</param>
+                                        </condition>
+                                        <condition id="0" name="On key pressed" sid="6802471331575546" type="Keyboard">
+                                            <param id="0" name="Key">83 (S)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="6119544315611375" type="Audio">
+                                            <param id="0" name="Audio file">re</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1153278391790014" type="bgcv">
+                                            <param id="0" name="Instance variable">re</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="2856249402416839" type="re">
+                                            <param id="0" name="Object">H_Ung</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="8465697098179698" type="phimphu" />
+                                        <action id="-7" name="Set size" sid="5417749946954591" type="H_Ung">
+                                            <param id="0" name="Width">(120/layoutwidth)*WindowWidth / scaleRatio</param>
+                                            <param id="1" name="Height">(475/layoutheight)*WindowHeight / scaleRatio</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="7164287958569312">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="887314259154035" type="Text">
+                                                    <param id="0" name="Unique ID">20</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="2556422862931558" type="Text">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block collapsed="1" sid="7036301492897801">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9438293466186779" type="bgcv">
+                                    <param id="0" name="Instance variable">mi</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="5114052566370166">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="1125363433574844" type="Keyboard">
+                                            <param id="0" name="Key">68 (D)</param>
+                                        </condition>
+                                        <condition id="4" name="Is touching object" sid="8977745737708704" type="Touch">
+                                            <param id="0" name="Object">mi</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="4179480269208901" type="Audio">
+                                            <param id="0" name="Audio file">me</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="2614443715501888" type="bgcv">
+                                            <param id="0" name="Instance variable">mi</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="408968318911192" type="mi">
+                                            <param id="0" name="Object">H_Ung</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="5894303238579429" type="phimphu" />
+                                        <action id="-7" name="Set size" sid="7744236242289325" type="H_Ung">
+                                            <param id="0" name="Width">(120/layoutwidth)*WindowWidth / scaleRatio</param>
+                                            <param id="1" name="Height">(475/layoutheight)*WindowHeight / scaleRatio</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="7858584936807001">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="9920006240853153" type="Text">
+                                                    <param id="0" name="Unique ID">21</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="2675794677947058" type="Text">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3036300394160626">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8343168257377354" type="bgcv">
+                                    <param id="0" name="Instance variable">fa</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="7230162441456716">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="2772025937611189" type="Keyboard">
+                                            <param id="0" name="Key">70 (F)</param>
+                                        </condition>
+                                        <condition id="4" name="Is touching object" sid="6813661241280026" type="Touch">
+                                            <param id="0" name="Object">fa</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="8670799929191647" type="Audio">
+                                            <param id="0" name="Audio file">fa</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9023909122762118" type="bgcv">
+                                            <param id="0" name="Instance variable">fa</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="7443125018312286" type="fa">
+                                            <param id="0" name="Object">H_Ung</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="1112046935141444" type="phimphu" />
+                                        <action id="-7" name="Set size" sid="1403985182388014" type="H_Ung">
+                                            <param id="0" name="Width">(120/layoutwidth)*WindowWidth / scaleRatio</param>
+                                            <param id="1" name="Height">(475/layoutheight)*WindowHeight / scaleRatio</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="87277726311671">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="3797906136670066" type="Text">
+                                                    <param id="0" name="Unique ID">22</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="6526369150780183" type="Text">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3220510918559725">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5472245425641983" type="bgcv">
+                                    <param id="0" name="Instance variable">sol</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="835883590689139">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="4462421672344409" type="Keyboard">
+                                            <param id="0" name="Key">71 (G)</param>
+                                        </condition>
+                                        <condition id="4" name="Is touching object" sid="6201785335697713" type="Touch">
+                                            <param id="0" name="Object">sol</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="6464770593977182" type="Audio">
+                                            <param id="0" name="Audio file">sol</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="2889931428135783" type="bgcv">
+                                            <param id="0" name="Instance variable">sol</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="1984639801157141" type="sol">
+                                            <param id="0" name="Object">H_Ung</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="7522121284985018" type="phimphu" />
+                                        <action id="-7" name="Set size" sid="9341931923811091" type="H_Ung">
+                                            <param id="0" name="Width">(120/layoutwidth)*WindowWidth / scaleRatio</param>
+                                            <param id="1" name="Height">(475/layoutheight)*WindowHeight / scaleRatio</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="5647172718646489">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="4180504215202643" type="Text">
+                                                    <param id="0" name="Unique ID">23</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="6186395882278597" type="Text">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4559821062785499">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8368806967878154" type="bgcv">
+                                    <param id="0" name="Instance variable">la</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="6053190460101107">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="3981335420407453" type="Keyboard">
+                                            <param id="0" name="Key">72 (H)</param>
+                                        </condition>
+                                        <condition id="4" name="Is touching object" sid="8189078491725114" type="Touch">
+                                            <param id="0" name="Object">la</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="1410987575081411" type="Audio">
+                                            <param id="0" name="Audio file">la</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7434177465313939" type="bgcv">
+                                            <param id="0" name="Instance variable">la</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="4579252039598138" type="la">
+                                            <param id="0" name="Object">H_Ung</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="2745398853903374" type="phimphu" />
+                                        <action id="-7" name="Set size" sid="5992549916268318" type="H_Ung">
+                                            <param id="0" name="Width">(120/layoutwidth)*WindowWidth / scaleRatio</param>
+                                            <param id="1" name="Height">(475/layoutheight)*WindowHeight / scaleRatio</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="391923770645838">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="3484816369514832" type="Text">
+                                                    <param id="0" name="Unique ID">24</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="7796040461227793" type="Text">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8251679086106565">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3307181569418817" type="bgcv">
+                                    <param id="0" name="Instance variable">si</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="6879650220702489">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="9205428959697418" type="Keyboard">
+                                            <param id="0" name="Key">74 (J)</param>
+                                        </condition>
+                                        <condition id="4" name="Is touching object" sid="1636785199693573" type="Touch">
+                                            <param id="0" name="Object">Si</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="905783238726484" type="Audio">
+                                            <param id="0" name="Audio file">si</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8359982919683241" type="bgcv">
+                                            <param id="0" name="Instance variable">si</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="4501558330778075" type="Si">
+                                            <param id="0" name="Object">H_Ung</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="7488170361124928" type="phimphu" />
+                                        <action id="-7" name="Set size" sid="3148716511026424" type="H_Ung">
+                                            <param id="0" name="Width">(120/layoutwidth)*WindowWidth / scaleRatio</param>
+                                            <param id="1" name="Height">(475/layoutheight)*WindowHeight / scaleRatio</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="2094068256632023">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="910445703788635" type="Text">
+                                                    <param id="0" name="Unique ID">25</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="1791100160760397" type="Text">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="470850468281788">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3975802798917242" type="bgcv">
+                                    <param id="0" name="Instance variable">do_high</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="5028030672661093">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="8611499400889672" type="Keyboard">
+                                            <param id="0" name="Key">75 (K)</param>
+                                        </condition>
+                                        <condition id="4" name="Is touching object" sid="4539553224942298" type="Touch">
+                                            <param id="0" name="Object">do2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="1874495265996624" type="Audio">
+                                            <param id="0" name="Audio file">do_h</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8139077215499694" type="bgcv">
+                                            <param id="0" name="Instance variable">do_high</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="9150289229783917" type="do2">
+                                            <param id="0" name="Object">H_Ung</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="6849835517643023" type="phimphu" />
+                                        <action id="-7" name="Set size" sid="4002415987806748" type="H_Ung">
+                                            <param id="0" name="Width">(120/layoutwidth)*WindowWidth / scaleRatio</param>
+                                            <param id="1" name="Height">(475/layoutheight)*WindowHeight / scaleRatio</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="1269596962655937">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="3734522277389249" type="Text">
+                                                    <param id="0" name="Unique ID">27</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="6989065111251049" type="Text">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1868033649617913">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9123628481126709" type="bgcv">
+                                    <param id="0" name="Instance variable">thang1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="3089500056740598">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="834714480104507" type="Touch">
+                                            <param id="0" name="Object">nutphu</param>
+                                        </condition>
+                                        <condition id="0" name="On key pressed" sid="2960676729713998" type="Keyboard">
+                                            <param id="0" name="Key">87 (W)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="6750822689686645" type="Audio">
+                                            <param id="0" name="Audio file">do_th</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4260841628860972" type="bgcv">
+                                            <param id="0" name="Instance variable">thang1</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="8248245535709551" type="nutphu">
+                                            <param id="0" name="Width">(80/layoutwidth)*WindowWidth / scaleRatio</param>
+                                            <param id="1" name="Height">(250/layoutheight)*WindowHeight / scaleRatio</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7973242695687265">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6010927724444683" type="bgcv">
+                                    <param id="0" name="Instance variable">thang2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="5395389843035303">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="712679209020353" type="Touch">
+                                            <param id="0" name="Object">nutphu2</param>
+                                        </condition>
+                                        <condition id="0" name="On key pressed" sid="9598701377108465" type="Keyboard">
+                                            <param id="0" name="Key">69 (E)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="9677796633162202" type="Audio">
+                                            <param id="0" name="Audio file">re_th</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9896714416138459" type="bgcv">
+                                            <param id="0" name="Instance variable">thang2</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="1814807556095972" type="nutphu2">
+                                            <param id="0" name="Width">(80/layoutwidth)*WindowWidth / scaleRatio</param>
+                                            <param id="1" name="Height">(250/layoutheight)*WindowHeight / scaleRatio</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4570931989543821">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3240344900143781" type="bgcv">
+                                    <param id="0" name="Instance variable">thang3</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="1593260235276082">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="9574558449975652" type="Touch">
+                                            <param id="0" name="Object">nutphu3</param>
+                                        </condition>
+                                        <condition id="0" name="On key pressed" sid="7150908574135796" type="Keyboard">
+                                            <param id="0" name="Key">84 (T)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="4890202753531429" type="Audio">
+                                            <param id="0" name="Audio file">fa_th</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="6700644869670788" type="bgcv">
+                                            <param id="0" name="Instance variable">thang3</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="6046101950950481" type="nutphu3">
+                                            <param id="0" name="Width">(80/layoutwidth)*WindowWidth / scaleRatio</param>
+                                            <param id="1" name="Height">(250/layoutheight)*WindowHeight / scaleRatio</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="447453372966953">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2901251582565018" type="bgcv">
+                                    <param id="0" name="Instance variable">thang4</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="8581448644541989">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="2172002131908756" type="Touch">
+                                            <param id="0" name="Object">nutphu4</param>
+                                        </condition>
+                                        <condition id="0" name="On key pressed" sid="6419029496925985" type="Keyboard">
+                                            <param id="0" name="Key">89 (Y)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="755784129879752" type="Audio">
+                                            <param id="0" name="Audio file">Sol_th</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4879585909145004" type="bgcv">
+                                            <param id="0" name="Instance variable">thang4</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="8464225385610421" type="nutphu4">
+                                            <param id="0" name="Width">(80/layoutwidth)*WindowWidth / scaleRatio</param>
+                                            <param id="1" name="Height">(250/layoutheight)*WindowHeight / scaleRatio</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="314787425518215">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3265503292793297" type="bgcv">
+                                    <param id="0" name="Instance variable">thang5</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="3286092164057188">
+                                    <conditions>
+                                        <condition id="3" name="On touched object" sid="8020918802019174" type="Touch">
+                                            <param id="0" name="Object">nutphu5</param>
+                                        </condition>
+                                        <condition id="0" name="On key pressed" sid="5357774410119939" type="Keyboard">
+                                            <param id="0" name="Key">85 (U)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="3844832493271925" type="Audio">
+                                            <param id="0" name="Audio file">la_th</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8408960310065294" type="bgcv">
+                                            <param id="0" name="Instance variable">thang5</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="8976830904986477" type="nutphu5">
+                                            <param id="0" name="Width">(80/layoutwidth)*WindowWidth / scaleRatio</param>
+                                            <param id="1" name="Height">(250/layoutheight)*WindowHeight / scaleRatio</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="2012838883423622" title="End_touch">
+            <sub-events>
+                <event-block any="1" sid="8020881203218511">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="2553369682923773" type="Touch" />
+                        <condition id="7" name="On any key released" sid="9653475517313813" type="Keyboard" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6720301861391386" type="bgcv">
+                            <param id="0" name="Instance variable">do_high</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5848211036382367" type="bgcv">
+                            <param id="0" name="Instance variable">re</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4817790931856256" type="bgcv">
+                            <param id="0" name="Instance variable">mi</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1890358890749754" type="bgcv">
+                            <param id="0" name="Instance variable">fa</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7872593779485862" type="bgcv">
+                            <param id="0" name="Instance variable">sol</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4376662576381932" type="bgcv">
+                            <param id="0" name="Instance variable">la</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7330303566430369" type="bgcv">
+                            <param id="0" name="Instance variable">si</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8353831961359203" type="bgcv">
+                            <param id="0" name="Instance variable">do</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7159678422645639" type="bgcv">
+                            <param id="0" name="Instance variable">thang1</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="4830251470874365" type="H_Ung" />
+                        <action id="-10" name="Set value" sid="5378181168132797" type="bgcv">
+                            <param id="0" name="Instance variable">thang2</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9382901943275532" type="bgcv">
+                            <param id="0" name="Instance variable">thang3</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6828902083126777" type="bgcv">
+                            <param id="0" name="Instance variable">thang4</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7925945891312388" type="bgcv">
+                            <param id="0" name="Instance variable">thang5</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="4767941275385532" type="phimphu">
+                            <param id="0" name="Width">(82/layoutwidth)*WindowWidth / scaleRatio</param>
+                            <param id="1" name="Height">(255/layoutheight)*WindowHeight / scaleRatio</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5315451831000645" type="Text">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="5814706035503021">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6037694652536382" type="System" />
+            </conditions>
+            <actions>
+                <action id="-24" name="Move to top" sid="9224458656374545" type="Text" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

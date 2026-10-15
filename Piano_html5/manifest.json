@@ -1,0 +1,22 @@
+{
+  "name": "Flat Piano Studio",
+  "short_name": "Flat Piano",
+  "description": "A quiet place to play, learn, and make music.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#17171a",
+  "theme_color": "#17171a",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}
